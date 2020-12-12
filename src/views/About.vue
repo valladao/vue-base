@@ -1,5 +1,28 @@
 <template>
+
   <div class="about">
-    <h1>This is an about page</h1>
+
+    <h1>{{ title }}</h1>
+
   </div>
+
 </template>
+
+<script>
+
+import { mapState } from 'vuex'
+
+export default {
+
+  computed: {
+
+    ...mapState({
+
+      title: state => state.test.message
+
+    })
+  }
+
+}
+
+</script>
