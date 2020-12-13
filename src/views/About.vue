@@ -1,14 +1,14 @@
 <template>
 
-  <div class="about">
+	<div class="about">
 
-    <h1>{{ title }}</h1>
+		<h1>{{ title }}</h1>
 
-    <p>{{ count }}</p>
+		<p>{{ count }}</p>
 
-    <button @click="increment">+</button>
+		<button @click="increment">+</button>
 
-  </div>
+	</div>
 
 </template>
 
@@ -18,25 +18,25 @@ import { mapState } from 'vuex'
 
 export default {
 
-  computed: {
+	computed: {
 
-    ...mapState({
+		...mapState({
 
-      title: state => state.test.message,
-      count: state => state.test.count
+			title: state => state.test.message,
+			count: state => state.test.count
 
-    })
-  },
+		})
+	},
 
-  methods: {
-    
-    increment() {
-      
-      this.$store.commit('test/increment')
+	methods: {
+		
+		increment() {
+			
+			this.$store.commit('test/increment')
 
-    }
+		}
 
-  }
+	}
 
 }
 
