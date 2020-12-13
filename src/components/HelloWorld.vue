@@ -23,6 +23,7 @@
             target="_blank"
           >Discord Community</a>
         </p>
+        <p>{{ count }}</p>
       </v-col>
 
       <v-col
@@ -92,6 +93,9 @@
 </template>
 
 <script>
+
+  import { mapState } from 'vuex'
+
   export default {
     name: 'HelloWorld',
 
@@ -147,5 +151,16 @@
         },
       ],
     }),
+
+    computed: {
+      
+      ...mapState({
+
+          count: state => state.test.count
+          
+      })
+
+    }
+
   }
 </script>

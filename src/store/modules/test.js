@@ -9,7 +9,13 @@ export default {
 
 	},
 
-	mutations: {},
+	mutations: {
+		
+		increment(state) {
+			state.count ++
+		}
+
+	},
 
 	getters: {},
 
